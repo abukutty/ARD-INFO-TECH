@@ -1035,20 +1035,28 @@
             color: var(--terminal-green);
         }
 
+        .modal-live-link-parent {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+        }
+
         .modal-live-link {
-            display: inline-block;
+            display: flex;
             padding: 12px 30px;
-            background: var(--terminal-green);
+            background: var(--code-blue);
             color: var(--dark-bg);
             text-decoration: none;
             font-family: 'JetBrains Mono', monospace;
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: -10px;
             transition: all 0.3s;
+            width: fit-content;
         }
 
         .modal-live-link:hover {
-            background: var(--code-blue);
+            background: var(--terminal-green);
         }
 
         /* Responsive */
@@ -1427,6 +1435,8 @@
         <div class="modal-content">
             <button class="close-modal project-close-btn">&times;</button>
             <div class="modal-preview" id="modalPreview"></div>
+            <div class="modal-live-link-parent"><a href="#" class="modal-live-link" id="modalLiveLink"
+                    target="_blank">View Live Website</a></div>
             <div class="modal-info">
                 <h3 id="modalTitle">Project Title</h3>
                 <p id="modalDescription">Project description will appear here.</p>
@@ -1435,7 +1445,6 @@
                     <ul id="modalFeatures"></ul>
                 </div>
                 <div class="project-tech" id="modalTech"></div>
-                <a href="#" class="modal-live-link" id="modalLiveLink" target="_blank">View Live Website</a>
             </div>
         </div>
     </div>
